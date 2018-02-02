@@ -111,6 +111,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/banana/overlay/dictionaries
 # Squisher Location
 SQUISHER_SCRIPT := vendor/banana/tools/squisher
 
+# Dex preopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUIGoogle
+
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
