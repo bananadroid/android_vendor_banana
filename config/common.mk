@@ -28,6 +28,14 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.selinux=1
 
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+# Disable ADB authentication
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
+else
+# Enable ADB authentication
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
+endif
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/banana/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
