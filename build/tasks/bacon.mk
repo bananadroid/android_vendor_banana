@@ -26,6 +26,10 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET) \
        $(INTERNAL_OTATOOLS_FILES)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(BANANA_TARGET_PACKAGE)
 	$(hide) $(MD5) $(BANANA_TARGET_PACKAGE) > $(BANANA_TARGET_PACKAGE).md5sum
+ifeq ($(BANANA_BUILD_TYPE), OFFICIAL)
+	@echo "Creating json OTA..."
+	$(hide) ./vendor/banana/tools/generate_json_build_info.sh $(BANANA_TARGET_PACKAGE)
+endif
 	@echo -e ""
 	@echo -e ${CL_YLW}"       ▄▄▄▄    ▄▄▄      ▄▄▄▄   ▄  ▄▄▄      ▄▄▄▄   ▄  ▄▄▄          "${CL_YLW}
 	@echo -e ${CL_YLW}"      ▓█████▄ ▒████▄   ▓█████▄ ██▒████▄   ▓█████▄ ██▒████▄        "${CL_YLW}
