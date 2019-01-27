@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
 # Additional apps
 PRODUCT_PACKAGES += \
     SearchLauncherQuickStep \
+    CustomDoze \
     DU-Themes \
     Etar \
     ExactCalculator \
