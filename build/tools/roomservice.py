@@ -232,11 +232,14 @@ def add_to_manifest(repositories, fallback_branch = None):
     f.write(raw_xml)
     f.close()
 
-def fetch_dependencies(repo_path, fallback_branch = None):
+def fetch_dependencies(repo_path, fallback_branch=None, first_dependency=False):
     print('Looking for dependencies in %s' % repo_path)
     dependencies_path = repo_path + '/banana.dependencies'
     syncable_repos = []
     verify_repos = []
+
+    if first_dependency:
+        os.system('vendor/banana/build/tools/roomcleaner.py %s' % repo_path)
 
     if os.path.exists(dependencies_path):
         dependencies_file = open(dependencies_path, 'r')
@@ -272,7 +275,7 @@ def has_branch(branches, revision):
 if depsonly:
     repo_path = get_from_manifest(device)
     if repo_path:
-        fetch_dependencies(repo_path)
+        fetch_dependencies(repo_path, None, True)
     else:
         print("Trying dependencies-only mode on a non-existing device tree?")
 
@@ -327,7 +330,7 @@ else:
             os.system('repo sync --force-sync %s' % repo_path)
             print("Repository synced!")
 
-            fetch_dependencies(repo_path, fallback_branch)
+            fetch_dependencies(repo_path, fallback_branch, True)
             print("Done")
             sys.exit()
 
