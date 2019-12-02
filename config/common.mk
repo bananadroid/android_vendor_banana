@@ -113,7 +113,7 @@ SQUISHER_SCRIPT := vendor/banana/tools/squisher
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUIGoogle
+    SystemUI
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
