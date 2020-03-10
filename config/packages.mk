@@ -10,6 +10,7 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
     RepainterServicePriv \
+    Seedvault \
     SettingsIntelligenceGoogle \
     SetupWizard \
     ThemePicker \
