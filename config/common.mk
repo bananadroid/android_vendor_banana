@@ -130,6 +130,6 @@ ifeq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
 endif
 
 # We modify several neverallows, so let the build proceed
-ifneq ($(TARGET_BUILD_VARIANT),user)
+ifneq ($(TARGET_BUILD_VARIANT),eng)
 SELINUX_IGNORE_NEVERALLOWS := true
 endif
