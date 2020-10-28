@@ -59,6 +59,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 $(foreach f,$(wildcard vendor/banana/prebuilt/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
 
+# Copy BananaDroid additional files
+PRODUCT_COPY_FILES += \
+    vendor/banana/prebuilt/google/etc/sysconfig/pixel_experience_2020.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2020.xml
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
