@@ -3,6 +3,10 @@ on post-fs-data
     chown system system /sys/class/power_supply/battery/charging_enabled
     chown system system /sys/class/power_supply/battery/input_suspend
 
+service vendor_flash_recovery /vendor/bin/install-recovery.sh
+    class main
+    disabled
+
 on property:sys.boot_completed=1
     # Restrict permissions to socket file
     # to hide Magisk & co.
