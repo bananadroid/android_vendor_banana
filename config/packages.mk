@@ -70,4 +70,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NavigationBarMode2ButtonOverlay
 
+# SystemUI plugins
+PRODUCT_PACKAGES += \
+    QuickAccessWallet
+
 -include vendor/qcom/perf/packages.mk
