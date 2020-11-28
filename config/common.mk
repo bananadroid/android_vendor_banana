@@ -78,6 +78,11 @@ PRODUCT_COPY_FILES += \
     vendor/banana/prebuilt/etc/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
     vendor/banana/prebuilt/google/etc/sysconfig/pixel_experience_2020.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2020.xml
 
+# Weather
+PRODUCT_COPY_FILES += \
+    vendor/banana/prebuilt/etc/default-permissions/com.android.providers.weather.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/com.android.providers.weather.xml \
+    vendor/banana/prebuilt/etc/permissions/com.android.providers.weather.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.android.providers.weather.xml
+
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
     vendor/banana/prebuilt/etc/sysconfig/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
