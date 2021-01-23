@@ -90,7 +90,7 @@ local_manifests = r'.repo/local_manifests'
 if not os.path.exists(local_manifests): os.makedirs(local_manifests)
 
 def exists_in_tree(lm, path):
-    for child in lm.getchildren():
+    for child in list(lm):
         if child.attrib['path'] == path:
             return True
     return False
