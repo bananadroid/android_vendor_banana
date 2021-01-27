@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     SimpleDeviceConfig \
     Snap \
+    SoftAPManager \
     StitchImage \
     StitchImageService
 
