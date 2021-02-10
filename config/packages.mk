@@ -32,9 +32,9 @@ PRODUCT_PACKAGES += \
     CustomDoze \
     ExactCalculator \
     GamingMode \
-    Gallery2 \
     OmniJaws \
     SimpleDeviceConfig \
+    SimpleGallery \
     Snap \
     SoftAPManager \
     StitchImage \
