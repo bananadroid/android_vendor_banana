@@ -31,9 +31,9 @@ PRODUCT_PACKAGES += \
     SearchLauncherQuickStep \
     CustomDoze \
     ExactCalculator \
-    Gallery2 \
     OmniJaws \
     SimpleDeviceConfig \
+    SimpleGallery \
     Snap \
     SoftAPManager \
     StitchImage \
