@@ -112,3 +112,9 @@ ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat64.enabled=true
 endif
+
+# Treble
+# Enable ALLOW_MISSING_DEPENDENCIES on Vendorless Builds
+ifeq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
+  ALLOW_MISSING_DEPENDENCIES := true
+endif
