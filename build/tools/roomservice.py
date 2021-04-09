@@ -125,7 +125,7 @@ def get_manifest_path():
         return ".repo/manifests/{}".format(m.find("include").get("name"))
 
 def get_default_revision():
-    m = ElementTree.parse(".repo/manifests/banana.xml")
+    lm = ElementTree.parse(".repo/manifests/banana.xml")
 
     for d in lm.findall("remote"):
         if d.get("name") == "banana":
@@ -207,12 +207,12 @@ def add_to_manifest(repositories, fallback_branch = None):
         repo_target = repository['target_path']
         print('Checking if %s is fetched from %s' % (repo_target, repo_name))
         if is_in_manifest(repo_target):
-            print('bananadroid/%s already fetched to %s' % (repo_name, repo_target))
+            print('%s already fetched to %s' % (repo_name, repo_target))
             continue
 
-        print('Adding dependency: bananadroid/%s -> %s' % (repo_name, repo_target))
+        print('Adding dependency: %s -> %s' % (repo_name, repo_target))
         project = ElementTree.Element("project", attrib = { "path": repo_target,
-            "remote": repo_remote, "name": "bananadroid/%s" % repo_name })
+            "remote": repo_remote, "name": "%s" % repo_name })
 
         if 'revision' in repository:
             project.set('revision',repository['revision'])
@@ -282,7 +282,8 @@ else:
     for repository in repositories:
         repo_name = repository['name']
         if re.match(r"^android_device_[^_]*_" + device + "$", repo_name):
-            print("Found repository: %s" % repository['name'])
+            repo_name = repository['full_name']
+            print("Found repository: %s" % repo_name)
             
             manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
             
