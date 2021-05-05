@@ -40,6 +40,7 @@ except ImportError:
 from xml.etree import ElementTree
 
 product = sys.argv[1]
+default_rem = "banana"
 
 if len(sys.argv) > 2:
     depsonly = sys.argv[2]
@@ -52,7 +53,7 @@ except:
     device = product
 
 if not depsonly:
-    print("Device %s not found. Attempting to retrieve device repository from LineageOS Github (http://github.com/LineageOS)." % device)
+    print("Device %s not found. Attempting to retrieve device repository from BananaDroid Github (http://github.com/bananadroid)." % device)
 
 repositories = []
 
@@ -72,7 +73,7 @@ def add_auth(githubreq):
         githubreq.add_header("Authorization","Basic %s" % githubauth)
 
 if not depsonly:
-    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:LineageOS+in:name+fork:true" % device)
+    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:BananaDroid+in:name+fork:true" % device)
     add_auth(githubreq)
     try:
         result = json.loads(urllib.request.urlopen(githubreq).read().decode())
@@ -124,10 +125,14 @@ def get_manifest_path():
         return ".repo/manifests/{}".format(m.find("include").get("name"))
 
 def get_default_revision():
-    m = ElementTree.parse(get_manifest_path())
-    d = m.findall('default')[0]
-    r = d.get('revision')
-    return r.replace('refs/heads/', '').replace('refs/tags/', '')
+    m = ElementTree.parse(".repo/manifests/banana.xml")
+
+    for d in lm.findall("remote"):
+        if d.get("name") == "banana":
+            r = d.get('revision')
+            return r.replace('refs/heads/', '').replace('refs/tags/', '')
+
+    return None
 
 def get_from_manifest(devicename):
     try:
@@ -164,9 +169,19 @@ def is_in_manifest(projectpath):
         if localpath.get("path") == projectpath:
             return True
 
-    # ... and don't forget the lineage snippet
+    # ... and don't forget the BananaDroid additions
     try:
-        lm = ElementTree.parse(".repo/manifests/snippets/lineage.xml")
+        lm = ElementTree.parse(".repo/manifests/lineage.xml")
+        lm = lm.getroot()
+    except:
+        lm = ElementTree.Element("manifest")
+
+    for localpath in lm.findall("project"):
+        if localpath.get("path") == projectpath:
+            return True
+
+    try:
+        lm = ElementTree.parse(".repo/manifests/banana.xml")
         lm = lm.getroot()
     except:
         lm = ElementTree.Element("manifest")
@@ -185,24 +200,27 @@ def add_to_manifest(repositories, fallback_branch = None):
         lm = ElementTree.Element("manifest")
 
     for repository in repositories:
+        repo_remote = default_rem
+        if 'remote' in repository:
+            repo_remote = repository['remote']
         repo_name = repository['repository']
         repo_target = repository['target_path']
         print('Checking if %s is fetched from %s' % (repo_target, repo_name))
         if is_in_manifest(repo_target):
-            print('LineageOS/%s already fetched to %s' % (repo_name, repo_target))
+            print('bananadroid/%s already fetched to %s' % (repo_name, repo_target))
             continue
 
-        print('Adding dependency: LineageOS/%s -> %s' % (repo_name, repo_target))
+        print('Adding dependency: bananadroid/%s -> %s' % (repo_name, repo_target))
         project = ElementTree.Element("project", attrib = { "path": repo_target,
-            "remote": "github", "name": "LineageOS/%s" % repo_name })
+            "remote": repo_remote, "name": "bananadroid/%s" % repo_name })
 
-        if 'branch' in repository:
-            project.set('revision',repository['branch'])
+        if 'revision' in repository:
+            project.set('revision',repository['revision'])
         elif fallback_branch:
-            print("Using fallback branch %s for %s" % (fallback_branch, repo_name))
+            print("Using fallback revision %s for %s" % (fallback_branch, repo_name))
             project.set('revision', fallback_branch)
         else:
-            print("Using default branch for %s" % repo_name)
+            print("Using default revision for %s" % repo_name)
 
         lm.append(project)
 
@@ -216,7 +234,7 @@ def add_to_manifest(repositories, fallback_branch = None):
 
 def fetch_dependencies(repo_path, fallback_branch = None):
     print('Looking for dependencies in %s' % repo_path)
-    dependencies_path = repo_path + '/lineage.dependencies'
+    dependencies_path = repo_path + '/banana.dependencies'
     syncable_repos = []
     verify_repos = []
 
@@ -312,4 +330,4 @@ else:
             print("Done")
             sys.exit()
 
-print("Repository for %s not found in the LineageOS Github repository list. If this is in error, you may need to manually add it to your local_manifests/roomservice.xml." % device)
+print("Repository for %s not found in the BananaDroid Github repository list. If this is in error, you may need to manually add it to your local_manifests/roomservice.xml." % device)

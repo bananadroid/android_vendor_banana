@@ -14,14 +14,17 @@
  * limitations under the License.
  */
 
-#pragma once
+#ifndef __BFQIO_H
+#define __BFQIO_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-int android_set_rt_ioprio(int pid, int rt);
+extern int android_set_rt_ioprio(int pid, int rt);
 
 #ifdef __cplusplus
 }
 #endif
+
+#endif /* __BFQIO_H */
