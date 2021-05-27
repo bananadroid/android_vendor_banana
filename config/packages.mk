@@ -29,6 +29,8 @@ PRODUCT_PACKAGES += \
 # Additional apps
 PRODUCT_PACKAGES += \
     SearchLauncherQuickStep \
+    DU-Themes \
+    Etar \
     ExactCalculator \
     Gallery2 \
     Jelly \
