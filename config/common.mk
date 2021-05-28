@@ -53,6 +53,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
+# Copy all Banana-specific init rc files
+$(foreach f,$(wildcard vendor/banana/prebuilt/etc/init/*.rc),\
+	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
+
 # Additional packages
 -include vendor/banana/config/packages.mk
 
