@@ -104,6 +104,7 @@ $(call inherit-product, vendor/banana/config/telephony.mk)
 # GApps version
 ifeq ($(GAPPS_VERSION),true)
 $(call inherit-product, vendor/google/gms/config.mk)
+$(call inherit-product, vendor/google/pixel/config.mk)
 DONT_DEXPREOPT_PREBUILTS := true
 else
 # Use default filter for problematic AOSP apps.
