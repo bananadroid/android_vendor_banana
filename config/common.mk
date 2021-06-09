@@ -74,17 +74,8 @@ endif
 # Versioning
 -include vendor/banana/config/version.mk
 
-# Themes and Theme overlays
-include vendor/themes/themes.mk
-
-# Add our overlays
-DEVICE_PACKAGE_OVERLAYS += vendor/themes/overlay/common
-
-# Exclude from RRO
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/themes/overlay
-
-# Include CM LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/banana/themes/dictionaries
+# Themes and overlays
+include vendor/extras/themes.mk
 
 # Squisher Location
 SQUISHER_SCRIPT := vendor/banana/tools/squisher
