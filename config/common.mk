@@ -68,6 +68,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
 
+# Telephony
+$(call inherit-product, vendor/banana/config/telephony.mk)
+
 # Additional packages
 -include vendor/banana/config/packages.mk
 
