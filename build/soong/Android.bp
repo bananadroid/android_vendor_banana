@@ -347,6 +347,26 @@ camera_parameter_library {
     },
 }
 
+// Force custom build fingerprint
+soong_config_module_type {
+    name: "force_build_fingerprint",
+    module_type: "cc_defaults",
+    config_namespace: "bananaGlobalVars",
+    value_variables: ["force_build_fingerprint"],
+    properties: [
+        "cppflags"
+    ],
+}
+
+force_build_fingerprint {
+    name: "force_build_fingerprint_defaults",
+    soong_config_variables: {
+        force_build_fingerprint: {
+            cppflags: ["-DTARGET_FORCE_BUILD_FINGERPRINT=\"%s\""],
+        },
+    },
+}
+
 // NVIDIA specific config modules
 soong_config_module_type {
     name: "nvidia_enhancements",
