@@ -81,6 +81,9 @@ $(call inherit-product, vendor/banana/config/telephony.mk)
 
 # Themes and overlays
 include vendor/extras/themes.mk
+DEVICE_PACKAGE_OVERLAYS += vendor/banana/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/banana/overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/banana/overlay/dictionaries
 
 # Squisher Location
 SQUISHER_SCRIPT := vendor/banana/tools/squisher
