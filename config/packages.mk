@@ -76,5 +76,3 @@ PRODUCT_PACKAGES += \
 # SystemUI plugins
 PRODUCT_PACKAGES += \
     QuickAccessWallet
-
--include vendor/qcom/perf/packages.mk
