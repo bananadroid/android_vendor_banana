@@ -35,7 +35,9 @@ PRODUCT_PACKAGES += \
     Gallery2 \
     Jelly \
     SimpleDeviceConfig \
-    Snap
+    Snap \
+    StitchImage \
+    StitchImageService
 
 # FS tools
 PRODUCT_PACKAGES += \
