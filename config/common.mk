@@ -3,6 +3,9 @@ BANANA_BUILD := true
 
 TARGET_FORCE_BUILD_FINGERPRINT := google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys
 
+# Inherit art options
+include vendor/banana/config/art.mk
+
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=android-google
