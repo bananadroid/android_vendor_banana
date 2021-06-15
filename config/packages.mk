@@ -93,3 +93,7 @@ PRODUCT_PACKAGES += \
 # Flipendo
 PRODUCT_PACKAGES += \
     Flipendo
+
+# Fonts
+PRODUCT_PACKAGES += \
+    Custom-Fonts
