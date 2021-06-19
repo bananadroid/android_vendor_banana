@@ -27,7 +27,6 @@ PRODUCT_PACKAGES += \
     unrar \
     unzip \
     vim \
-    wget \
     zip
 
 # Openssh
