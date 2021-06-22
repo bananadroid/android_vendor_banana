@@ -30,7 +30,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SearchLauncherQuickStep \
     CustomDoze \
-    DU-Themes \
     Etar \
     ExactCalculator \
     Gallery2 \
