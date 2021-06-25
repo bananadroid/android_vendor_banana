@@ -1,8 +1,8 @@
 #Version of the ROM
 BANANA_CODENAME := 11
-BANANA_REVISION := Zero
+BANANA_REVISION := v1.0
 
-BANANA_BUILD_DATE := $(shell date -u +%Y%m%d)
+BANANA_BUILD_DATE := $(shell date -u +%Y-%m-%d)
 
 ifndef BANANA_BUILDTYPE
   BANANA_BUILDTYPE := UNOFFICIAL
