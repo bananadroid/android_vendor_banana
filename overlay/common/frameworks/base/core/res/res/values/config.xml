@@ -62,7 +62,7 @@
         <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryContentProvider</item>
     </string-array>
 
-    <string name="config_mms_user_agent">LineageOS</string>
+    <string name="config_mms_user_agent">BananaDroid</string>
     <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
 
     <!-- Enable lockscreen rotation by default -->
