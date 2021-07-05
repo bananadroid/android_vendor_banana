@@ -60,24 +60,6 @@ PRODUCT_PACKAGES += \
     mke2fs \
     mkfs.ntfs
 
-# Permissions
-PRODUCT_PACKAGES += \
-    privapp-permissions-banana.xml \
-    privapp-permissions-banana-product.xml \
-    privapp-permissions-banana-system_ext.xml
-
-# Exempt DeskClock from Powersave
-PRODUCT_PACKAGES += \
-    deskclock.xml
-
-# Backup Services whitelist
-PRODUCT_PACKAGES += \
-    backup.xml
-
-# Hidden API whitelist
-PRODUCT_PACKAGES += \
-    banana-hiddenapi-package-whitelist.xml
-
 # ThemePicker
 PRODUCT_PACKAGES += \
     ThemePicker
