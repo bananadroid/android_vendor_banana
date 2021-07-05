@@ -67,6 +67,7 @@ PRODUCT_COPY_FILES += \
     vendor/banana/prebuilt/etc/permissions/privapp-permissions-banana.xml:$(TARGET_COPY_OUT_ETC)/permissions/privapp-permissions-banana.xml \
     vendor/banana/prebuilt/etc/permissions/privapp-permissions-banana-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-banana-product.xml \
     vendor/banana/prebuilt/etc/permissions/privapp-permissions-banana-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-banana-system_ext.xml \
+    vendor/banana/prebuilt/etc/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
     vendor/banana/prebuilt/google/etc/sysconfig/pixel_experience_2020.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2020.xml
 
 # Backup Services whitelist
