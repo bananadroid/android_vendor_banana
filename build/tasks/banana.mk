@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-BANANA_TARGET_PACKAGE := $(PRODUCT_OUT)/BananaDroid-$(BANANA_VERSION).zip
+BANANA_TARGET_PACKAGE := $(PRODUCT_OUT)/BananaDroid-$(BANANA_RELEASED_VERSION).zip
 
 MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
