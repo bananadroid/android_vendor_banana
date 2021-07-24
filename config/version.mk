@@ -2,7 +2,7 @@
 ANDROID_VERSION := 11
 
 BANANA_CODENAME := PisangRaja
-BANANA_VERSION := v1
+BANANA_VERSION := v2
 
 BANANA_BUILD_DATE := $(shell date -u +%Y-%m-%d)
 
