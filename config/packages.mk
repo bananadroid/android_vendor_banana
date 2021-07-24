@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Gallery2 \
     Jelly \
+    OmniJaws \
     SimpleDeviceConfig \
     Snap \
     StitchImage \
