@@ -254,6 +254,9 @@ def fetch_dependencies(repo_path, fallback_branch=None, first_dependency=False):
             else:
                 verify_repos.append(dependency['target_path'])
 
+            if not os.path.isdir(dependency['target_path']):
+                syncable_repos.append(dependency['target_path'])
+
         dependencies_file.close()
 
         if len(fetch_list) > 0:
