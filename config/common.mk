@@ -147,4 +147,6 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product, vendor/banana/config/telephony.mk)
 
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/banana/config/device_framework_matrix.xml
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
