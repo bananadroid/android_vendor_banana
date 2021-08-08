@@ -123,8 +123,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     procmem
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/banana/overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/banana/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/banana/overlay/no-rro
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/banana/overlay/common \
+    vendor/banana/overlay/no-rro
 
 PRODUCT_PACKAGES += \
     NetworkStackOverlay
