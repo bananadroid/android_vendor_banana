@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
     CustomDoze \
     Etar \
     ExactCalculator \
+    GamingMode \
     Gallery2 \
     Jelly \
     OmniJaws \
