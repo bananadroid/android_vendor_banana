@@ -30,17 +30,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SearchLauncherQuickStep \
     CustomDoze \
-    Etar \
     ExactCalculator \
     GamingMode \
     Gallery2 \
-    Jelly \
     OmniJaws \
     SimpleDeviceConfig \
     Snap \
     SoftAPManager \
     StitchImage \
     StitchImageService
+
+ifneq ($(GAPPS_VERSION),true)
+PRODUCT_PACKAGES += \
+    Etar \
+    Jelly
+endif
 
 # Extra Tools
 PRODUCT_PACKAGES += \
