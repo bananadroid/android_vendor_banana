@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
 ifneq ($(GAPPS_VERSION),true)
 PRODUCT_PACKAGES += \
     Etar \
-    Jelly
+    ViaBrowser
 endif
 
 # Extra Tools
