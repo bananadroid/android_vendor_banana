@@ -139,7 +139,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 
 # Blurs
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sf.blurs_are_expensive=1 \
+    persist.sys.sf.disable_blurs=0 \
+    ro.sf.blurs_are_expensive=0 \
     ro.surface_flinger.supports_background_blur=1
 
 # This needs to be specified explicitly to override ro.apex.updatable=true from
