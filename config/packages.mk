@@ -31,6 +31,7 @@ PRODUCT_PACKAGES += \
     SearchLauncherQuickStep \
     CustomDoze \
     ExactCalculator \
+    GamingMode \
     OmniJaws \
     SimpleDeviceConfig \
     SimpleGallery \
