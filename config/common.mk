@@ -1,7 +1,7 @@
 PRODUCT_BRAND ?= BananaDroid
 BANANA_BUILD := true
 
-TARGET_FORCE_BUILD_FINGERPRINT := google/redfin/redfin:11/RQ3A.210905.001/7511028:user/release-keys
+TARGET_FORCE_BUILD_FINGERPRINT := google/redfin/redfin:11/RQ3A.211001.001/7641976:user/release-keys
 
 # Inherit art options
 include vendor/banana/config/art.mk
