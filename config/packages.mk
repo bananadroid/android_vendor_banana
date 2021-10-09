@@ -1,7 +1,9 @@
 # BananaDroid packages
 PRODUCT_PACKAGES += \
     Recorder \
-    ThemePicker
+    ThemePicker \
+    NoCutoutOverlay \
+    AvoidAppsInCutoutOverlay
 
 # Config
 PRODUCT_PACKAGES += \
