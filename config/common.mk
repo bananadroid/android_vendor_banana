@@ -54,7 +54,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/banana/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
+    vendor/banana/config/permissions/backup.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/backup.xml
 
 # Copy all Banana-specific init rc files
 $(foreach f,$(wildcard vendor/banana/prebuilt/common/etc/init/*.rc),\
@@ -62,7 +62,7 @@ $(foreach f,$(wildcard vendor/banana/prebuilt/common/etc/init/*.rc),\
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
-    vendor/banana/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
+    vendor/banana/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.nfc.beam.xml
 
 # Enable one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -70,7 +70,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.sip.voip.xml
+    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.sip.voip.xml
 
 # Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
