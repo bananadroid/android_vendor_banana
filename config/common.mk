@@ -94,9 +94,8 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
-# Dex preopt
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
+# Dex preopt everything
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 
 # Root
 PRODUCT_PACKAGES += \
