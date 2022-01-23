@@ -4,7 +4,8 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
-    SettingsIntelligenceGoogle
+    SettingsIntelligenceGoogle \
+    RepainterServicePriv
 
 # Config
 PRODUCT_PACKAGES += \
