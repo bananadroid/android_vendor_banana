@@ -9,6 +9,7 @@ PRODUCT_PACKAGES += \
     Recorder \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
+    RepainterServicePriv \
     SettingsIntelligenceGoogle \
     SetupWizard \
     ThemePicker \
