@@ -2,6 +2,7 @@
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
 PRODUCT_BRAND ?= BananaDroid
+include vendor/banana/config/signed.mk
 include vendor/banana/config/version.mk
 
 PRODUCT_SIZE := full
