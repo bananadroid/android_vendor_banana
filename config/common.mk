@@ -78,7 +78,8 @@ PRODUCT_COPY_FILES += \
 
 # Banana Updater permissions
 PRODUCT_COPY_FILES += \
-    vendor/banana/config/permissions/privapp-permissions-banana-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-banana.xml
+    vendor/banana/config/permissions/privapp-permissions-banana-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-banana.xml \
+    vendor/banana/config/permissions/privapp-permissions-banana-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-banana-product.xml
 
 # Log privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

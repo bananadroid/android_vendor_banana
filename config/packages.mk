@@ -3,7 +3,8 @@ PRODUCT_PACKAGES += \
     Recorder \
     ThemePicker \
     NoCutoutOverlay \
-    AvoidAppsInCutoutOverlay
+    AvoidAppsInCutoutOverlay \
+    SettingsIntelligenceGoogle
 
 # Config
 PRODUCT_PACKAGES += \
