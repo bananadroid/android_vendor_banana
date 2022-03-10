@@ -13,6 +13,7 @@
 # limitations under the License.
 
 BANANA_MOD_VERSION = v12.1
+BANANA_PLATFORM_RELEASE_OR_CODENAME := 12L
 
 ifndef BANANA_BUILD_TYPE
 BANANA_BUILD_TYPE := UNOFFICIAL
@@ -42,4 +43,5 @@ PRODUCT_GENERIC_PROPERTIES += \
   ro.banana.build.date=$(BANANA_BUILD_DATETIME)\
   ro.banana.display.version=$(BANANA_DISPLAY_VERSION) \
   ro.banana.fingerprint=$(BANANA_FINGERPRINT)\
-  ro.banana.edition=$(BANANA_EDITION)
+  ro.banana.edition=$(BANANA_EDITION)\
+  ro.banana.settings.android_version=$(BANANA_PLATFORM_RELEASE_OR_CODENAME)
