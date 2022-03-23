@@ -36,7 +36,8 @@ SOONG_CONFIG_bananaGlobalVars += \
     target_init_vendor_lib \
     target_ld_shim_libs \
     target_surfaceflinger_udfps_lib \
-    target_uses_prebuilt_dynamic_partitions
+    target_uses_prebuilt_dynamic_partitions \
+    uses_egl_display_array
 
 SOONG_CONFIG_NAMESPACES += bananaNvidiaVars
 SOONG_CONFIG_bananaNvidiaVars += \
@@ -78,6 +79,7 @@ SOONG_CONFIG_bananaGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB
 SOONG_CONFIG_bananaGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
 SOONG_CONFIG_bananaGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
 SOONG_CONFIG_bananaGlobalVars_target_uses_prebuilt_dynamic_partitions := $(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)
+SOONG_CONFIG_bananaGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_bananaQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
