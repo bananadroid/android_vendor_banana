@@ -23,6 +23,8 @@ Additional BananaDroid functions:
 EOF
 }
 
+alias mka=m
+
 function mk_timer()
 {
     local start_time=$(date +"%s")
@@ -715,8 +717,6 @@ function bananarebase() {
     repo abandon tmprebase .
     cd $pwd
 }
-
-alias mka=m
 
 function cmka() {
     if [ ! -z "$1" ]; then
