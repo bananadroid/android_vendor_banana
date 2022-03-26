@@ -717,7 +717,7 @@ function bananarebase() {
 }
 
 function mka() {
-    m
+    m "$@"
 }
 
 function cmka() {
