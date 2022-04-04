@@ -81,6 +81,10 @@ PRODUCT_COPY_FILES += \
     vendor/banana/config/permissions/privapp-permissions-banana-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-banana.xml \
     vendor/banana/config/permissions/privapp-permissions-banana-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-banana-product.xml
 
+# Disable remote keyguard animation
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.wm.enable_remote_keyguard_animation=0
+
 # Log privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
