@@ -75,3 +75,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Disable iorapd
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.iorapd.enable=false
+
+# SystemUI
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    dalvik.vm.systemuicompilerfilter=speed
