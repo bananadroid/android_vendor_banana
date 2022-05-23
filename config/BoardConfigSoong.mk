@@ -42,7 +42,8 @@ SOONG_CONFIG_bananaGlobalVars += \
     target_surfaceflinger_udfps_lib \
     target_uses_prebuilt_dynamic_partitions \
     uses_camera_parameter_lib \
-    uses_egl_display_array
+    uses_egl_display_array \
+    uses_legacy_fd_fbdev
 
 SOONG_CONFIG_NAMESPACES += bananaNvidiaVars
 SOONG_CONFIG_bananaNvidiaVars += \
@@ -69,6 +70,7 @@ SOONG_CONFIG_bananaGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_bananaGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_bananaGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_bananaGlobalVars_has_memfd_backport := $(TARGET_HAS_MEMFD_BACKPORT)
+SOONG_CONFIG_bananaGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBDEV)
 SOONG_CONFIG_bananaNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_bananaQcomVars_legacy_hw_disk_encryption := $(TARGET_LEGACY_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_bananaQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
