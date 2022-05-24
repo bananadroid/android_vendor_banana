@@ -81,3 +81,7 @@ else
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.launcher.blur.appLaunch=0
 endif
+
+# Disable iorapd
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.iorapd.enable=false
