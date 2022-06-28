@@ -9,7 +9,6 @@ PRODUCT_PACKAGES += \
 ifneq ($(WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
     ThemePicker \
-    Launcher3QuickStep \
     SimpleGallery
 endif
 
@@ -36,6 +35,12 @@ PRODUCT_PACKAGES += \
     unzip \
     vim \
     zip
+
+# Lawnchair
+TARGET_BUILD_LAWNCHAIR ?= true
+ifeq ($(strip $(TARGET_BUILD_LAWNCHAIR)),true)
+include vendor/lawnchair/lawnchair.mk
+endif
 
 # Openssh
 PRODUCT_PACKAGES += \
