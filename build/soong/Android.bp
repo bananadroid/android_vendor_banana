@@ -21,7 +21,7 @@ banana_generator {
     name: "generated_kernel_includes",
 
     // The headers make command
-    cmd: "$(PATH_OVERRIDE_SOONG) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(TARGET_KERNEL_SOURCE) O=$(KERNEL_BUILD_OUT_PREFIX)$(genDir) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) headers_install",
+    cmd: "$(PATH_OVERRIDE_SOONG) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(TARGET_KERNEL_SOURCE) O=$(KERNEL_BUILD_OUT_PREFIX)$(genDir) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) headers_install",
 
     // Directories that can be imported by a cc_* module generated_headers property
     export_include_dirs: [
@@ -29,7 +29,7 @@ banana_generator {
         "usr/include",
         "usr/include/audio",
         "usr/include/audio/include/uapi",
-        "usr/techpack/audio/include"
+        "usr/techpack/audio/include",
     ],
 
     // Sources for dependency tracking
@@ -158,23 +158,6 @@ surfaceflinger_fod_lib {
 }
 
 soong_config_module_type {
-    name: "target_uses_prebuilt_dynamic_partitions",
-    module_type: "cc_defaults",
-    config_namespace: "bananaGlobalVars",
-    bool_variables: ["target_uses_prebuilt_dynamic_partitions"],
-    properties: ["cppflags"],
-}
-
-target_uses_prebuilt_dynamic_partitions {
-    name: "target_uses_prebuilt_dynamic_partitions_defaults",
-    soong_config_variables: {
-        target_uses_prebuilt_dynamic_partitions: {
-            cppflags: ["-DTARGET_USES_PREBUILT_DYNAMIC_PARTITIONS"],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "ignores_ftp_pptp_conntrack_failure_defaults",
     module_type: "cc_defaults",
     config_namespace: "bananaGlobalVars",
@@ -187,6 +170,23 @@ ignores_ftp_pptp_conntrack_failure_defaults {
     soong_config_variables: {
         ignores_ftp_pptp_conntrack_failure: {
             cppflags: ["-DIGNORES_FTP_PPTP_CONNTRACK_FAILURE"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "needs_camera_boottime",
+    module_type: "cc_defaults",
+    config_namespace: "bananaGlobalVars",
+    bool_variables: ["needs_camera_boottime"],
+    properties: ["cppflags"],
+}
+
+needs_camera_boottime {
+    name: "needs_camera_boottime_defaults",
+    soong_config_variables: {
+        needs_camera_boottime: {
+            cppflags: ["-DTARGET_CAMERA_BOOTTIME_TIMESTAMP"],
         },
     },
 }
@@ -209,23 +209,6 @@ needs_netd_direct_connect_rule {
 }
 
 soong_config_module_type {
-    name: "target_enforce_ab_ota_partition_list",
-    module_type: "cc_defaults",
-    config_namespace: "bananaGlobalVars",
-    bool_variables: ["target_enforce_ab_ota_partition_list"],
-    properties: ["cppflags"],
-}
-
-target_enforce_ab_ota_partition_list {
-    name: "target_enforce_ab_ota_partition_list_defaults",
-    soong_config_variables: {
-        target_enforce_ab_ota_partition_list: {
-            cppflags: ["-DTARGET_ENFORCE_AB_OTA_PARTITION_LIST"],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "legacy_hw_disk_encryption",
     module_type: "cc_defaults",
     config_namespace: "bananaQcomVars",
@@ -238,23 +221,6 @@ legacy_hw_disk_encryption {
     soong_config_variables: {
         legacy_hw_disk_encryption: {
             cppflags: ["-DLEGACY_HW_DISK_ENCRYPTION"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "camera_needs_client_info",
-    module_type: "cc_defaults",
-    config_namespace: "bananaGlobalVars",
-    bool_variables: ["camera_needs_client_info"],
-    properties: ["cppflags"],
-}
-
-camera_needs_client_info {
-    name: "camera_needs_client_info_defaults",
-    soong_config_variables: {
-        camera_needs_client_info: {
-            cppflags: ["-DCAMERA_NEEDS_CLIENT_INFO"],
         },
     },
 }
@@ -331,10 +297,7 @@ soong_config_module_type {
     module_type: "cc_defaults",
     config_namespace: "bananaGlobalVars",
     value_variables: ["bootloader_message_offset"],
-    properties: [
-        "cflags",
-        "export_cflags",
-    ],
+    properties: ["cflags"],
 }
 
 bootloader_message_offset {
@@ -342,7 +305,6 @@ bootloader_message_offset {
     soong_config_variables: {
         bootloader_message_offset: {
             cflags: ["-DBOARD_RECOVERY_BLDRMSG_OFFSET=%s"],
-            export_cflags: ["-DBOARD_RECOVERY_BLDRMSG_OFFSET=%s"],
         },
     },
 }
@@ -360,26 +322,6 @@ camera_parameter_library {
     soong_config_variables: {
         uses_camera_parameter_lib: {
             whole_static_libs: ["%s"],
-        },
-    },
-}
-
-// Force custom build fingerprint
-soong_config_module_type {
-    name: "force_build_fingerprint",
-    module_type: "cc_defaults",
-    config_namespace: "bananaGlobalVars",
-    value_variables: ["force_build_fingerprint"],
-    properties: [
-        "cppflags"
-    ],
-}
-
-force_build_fingerprint {
-    name: "force_build_fingerprint_defaults",
-    soong_config_variables: {
-        force_build_fingerprint: {
-            cppflags: ["-DTARGET_FORCE_BUILD_FINGERPRINT=\"%s\""],
         },
     },
 }
@@ -437,25 +379,6 @@ qti_camera_device {
         uses_qti_camera_device: {
             cppflags: ["-DQTI_CAMERA_DEVICE"],
             shared_libs: ["vendor.qti.hardware.camera.device@1.0"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "camera_boottime_timestamp",
-    module_type: "cc_defaults",
-    config_namespace: "bananaQcomVars",
-    bool_variables: ["needs_camera_boottime_timestamp"],
-    properties: [
-        "cflags",
-    ],
-}
-
-camera_boottime_timestamp {
-    name: "needs_camera_boottime",
-    soong_config_variables: {
-        needs_camera_boottime_timestamp: {
-            cflags: ["-DTARGET_CAMERA_BOOTTIME_TIMESTAMP"],
         },
     },
 }

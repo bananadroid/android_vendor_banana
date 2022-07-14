@@ -1,54 +1,18 @@
-# Additional packages
-
-# Include explicitly to work around GMS issues
+# BananaDroid packages
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full \
-    librsjni
+    Recorder \
+    ThemePicker
 
-# Telephony
+# Config
 PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
+    SimpleDeviceConfig
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
-# CellBroadcastReceiver
-PRODUCT_PACKAGES += \
-CellBroadcastReceiver
-
-# Exchange support
-PRODUCT_PACKAGES += \
-    Exchange2
-
-# Additional apps
-PRODUCT_PACKAGES += \
-    SearchLauncherQuickStep \
-    CustomDoze \
-    ExactCalculator \
-    GamingMode \
-    OmniJaws \
-    SimpleDeviceConfig \
-    SimpleGallery \
-    Snap \
-    SoftAPManager \
-    StitchImage \
-    StitchImageService
-
-ifneq ($(GAPPS_VERSION),true)
-PRODUCT_PACKAGES += \
-    Etar \
-    ViaBrowser
-endif
-
-# Extra Tools
+# Extra tools in BananaDroid
 PRODUCT_PACKAGES += \
     7z \
+    awk \
+    bash \
+    bzip2 \
     curl \
     getcap \
     htop \
@@ -56,32 +20,24 @@ PRODUCT_PACKAGES += \
     libsepol \
     nano \
     pigz \
+    powertop \
     setcap \
     unrar \
+    unzip \
+    vim \
+    wget \
     zip
 
-# FS tools
+# Openssh
 PRODUCT_PACKAGES += \
-    fsck.ntfs \
-    mount.ntfs \
-    mke2fs \
-    mkfs.ntfs
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
 
-# ThemePicker
+# rsync
 PRODUCT_PACKAGES += \
-    ThemePicker
-
-PRODUCT_PACKAGES += \
-    NavigationBarMode2ButtonOverlay
-
-# SystemUI plugins
-PRODUCT_PACKAGES += \
-    QuickAccessWallet
-
-# Flipendo
-PRODUCT_PACKAGES += \
-    Flipendo
-
-# Fonts
-PRODUCT_PACKAGES += \
-    Custom-Fonts
+    rsync

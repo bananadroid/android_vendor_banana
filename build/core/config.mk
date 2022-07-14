@@ -13,11 +13,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include board/platform macros
-include vendor/banana/build/core/utils.mk
-
-# Include vendor platform definitions
-include vendor/banana/build/core/vendor/*.mk
-
 # Rules for QCOM targets
 include $(TOPDIR)vendor/banana/build/core/qcom_target.mk
