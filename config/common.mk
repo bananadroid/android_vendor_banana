@@ -106,6 +106,9 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/banana/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/banana/overlay/common
 
+PRODUCT_PACKAGES += \
+    NetworkStackOverlay
+
 $(call inherit-product, vendor/banana/config/telephony.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
