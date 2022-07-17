@@ -9,7 +9,8 @@ PRODUCT_PACKAGES += \
 ifneq ($(WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
     ThemePicker \
-    Launcher3QuickStep
+    Launcher3QuickStep \
+    SimpleGallery
 endif
 
 # Config

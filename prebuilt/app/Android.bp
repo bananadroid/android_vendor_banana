@@ -1,0 +1,11 @@
+android_app_import {
+    name: "SimpleGallery",
+    apk: "SimpleGallery.apk",
+    presigned: true,
+    overrides: ["Gallery2 SnapdragonGallery"],
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
+}
