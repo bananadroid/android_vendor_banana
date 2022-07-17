@@ -186,7 +186,4 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/banana/overlay/common
 
 $(call inherit-product, vendor/banana/config/telephony.mk)
 
-# rro_overlays
-$(call inherit-product, vendor/banana/config/rro_overlays.mk)
-
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
