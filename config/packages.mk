@@ -1,5 +1,6 @@
 # BananaDroid packages
 PRODUCT_PACKAGES += \
+    GameSpace \
     Recorder \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
