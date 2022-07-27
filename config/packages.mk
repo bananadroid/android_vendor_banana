@@ -10,6 +10,7 @@ PRODUCT_PACKAGES += \
 ifneq ($(WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
     BananaThemesStub \
+    Etar \
     ExactCalculator \
     ThemePicker \
     SimpleGallery
