@@ -22,6 +22,9 @@ endif
 
 TARGET_PRODUCT_SHORT := $(subst banana_,,$(BANANA_BUILD))
 
+# Custom security patch
+CUSTOM_SECURITY_PATCH := 2022-08-05
+
 # GApps
 ifeq ($(WITH_GAPPS),true)
 IS_PHONE := true
@@ -44,6 +47,7 @@ PRODUCT_GENERIC_PROPERTIES += \
   ro.banana.releasetype=$(BANANA_BUILD_TYPE) \
   ro.modversion=$(BANANA_RELEASED_VERSION) \
   ro.banana.build.date=$(BANANA_BUILD_DATETIME)\
+  ro.banana.build_security_patch=$(CUSTOM_SECURITY_PATCH) \
   ro.banana.display.date=$(BANANA_DISPLAY_DATE)\
   ro.banana.display.version=$(BANANA_DISPLAY_VERSION) \
   ro.banana.fingerprint=$(BANANA_FINGERPRINT)\
