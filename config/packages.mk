@@ -3,6 +3,7 @@ PRODUCT_PACKAGES += \
     GameSpace \
     Recorder \
     NoCutoutOverlay \
+    OmniJaws \
     AvoidAppsInCutoutOverlay \
     SettingsIntelligenceGoogle \
     RepainterServicePriv
