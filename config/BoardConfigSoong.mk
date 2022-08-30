@@ -37,7 +37,6 @@ SOONG_CONFIG_bananaGlobalVars += \
     needs_netd_direct_connect_rule \
     target_init_vendor_lib \
     target_ld_shim_libs \
-    target_process_sdk_version_override \
     target_surfaceflinger_udfps_lib \
     target_uses_prebuilt_dynamic_partitions
 
@@ -84,7 +83,6 @@ SOONG_CONFIG_bananaGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_
 SOONG_CONFIG_bananaGlobalVars_target_alternative_futex_waiters := $(TARGET_ALTERNATIVE_FUTEX_WAITERS)
 SOONG_CONFIG_bananaGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_bananaGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
-SOONG_CONFIG_bananaGlobalVars_target_process_sdk_version_override := $(TARGET_PROCESS_SDK_VERSION_OVERRIDE)
 SOONG_CONFIG_bananaGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
 SOONG_CONFIG_bananaGlobalVars_target_uses_prebuilt_dynamic_partitions := $(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
