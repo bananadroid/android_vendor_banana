@@ -32,7 +32,6 @@ SOONG_CONFIG_bananaGlobalVars += \
     bootloader_message_offset \
     camera_needs_client_info_lib \
     target_alternative_futex_waiters \
-    disable_postrender_cleanup \
     has_memfd_backport \
     needs_camera_boottime \
     needs_netd_direct_connect_rule \
@@ -62,7 +61,6 @@ endif
 
 # Soong bool variables
 SOONG_CONFIG_bananaGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
-SOONG_CONFIG_bananaGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 SOONG_CONFIG_bananaGlobalVars_has_memfd_backport := $(TARGET_HAS_MEMFD_BACKPORT)
 SOONG_CONFIG_bananaGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_bananaGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
