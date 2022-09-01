@@ -6,13 +6,12 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     AvoidAppsInCutoutOverlay \
     SettingsIntelligenceGoogle \
+    ThemePicker \
     RepainterServicePriv
 
 ifneq ($(WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
-    BananaThemesStub \
     ExactCalculator \
-    ThemePicker \
     SimpleCalendar \
     SimpleGallery
 endif
