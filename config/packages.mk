@@ -7,6 +7,7 @@ PRODUCT_PACKAGES += \
     AvoidAppsInCutoutOverlay \
     SettingsIntelligenceGoogle \
     ThemePicker \
+    Launcher3QuickStep \
     RepainterServicePriv
 
 ifneq ($(WITH_GAPPS),true)
@@ -39,12 +40,6 @@ PRODUCT_PACKAGES += \
     unzip \
     vim \
     zip
-
-# Lawnchair
-TARGET_BUILD_LAWNCHAIR ?= true
-ifeq ($(strip $(TARGET_BUILD_LAWNCHAIR)),true)
-include vendor/lawnchair/lawnchair.mk
-endif
 
 # Openssh
 PRODUCT_PACKAGES += \
