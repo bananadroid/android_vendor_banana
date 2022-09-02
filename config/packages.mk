@@ -1,5 +1,6 @@
 # BananaDroid packages
 PRODUCT_PACKAGES += \
+    BananaPaper \
     GameSpace \
     Recorder \
     NoCutoutOverlay \
