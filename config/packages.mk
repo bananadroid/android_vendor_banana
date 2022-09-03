@@ -9,7 +9,6 @@ PRODUCT_PACKAGES += \
     SettingsIntelligenceGoogle \
     ThemePicker \
     Launcher3QuickStep \
-    Lawnicons \
     RepainterServicePriv
 
 ifneq ($(WITH_GAPPS),true)
