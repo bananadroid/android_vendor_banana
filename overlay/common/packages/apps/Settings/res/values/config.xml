@@ -36,4 +36,7 @@
 
     <!-- Settings intelligence interaction log intent action -->
     <string name="config_settingsintelligence_package_name">com.google.android.settings.intelligence</string>
+
+    <!-- Whether to show a preference item for mobile plan -->
+    <bool name="config_show_mobile_plan">false</bool>
 </resources>
