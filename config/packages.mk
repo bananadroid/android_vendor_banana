@@ -2,6 +2,7 @@
 PRODUCT_PACKAGES += \
     Aperture \
     BananaPaper \
+    BatteryStatsViewer \
     Etar \
     ExactCalculator \
     GameSpace \
