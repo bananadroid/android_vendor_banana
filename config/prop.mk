@@ -72,16 +72,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.feature.skip_button_use_mobile_data.carrier1839=true \
     setupwizard.theme=glif_v3_light
 
-# Blur
-ifeq ($(TARGET_ENABLE_BLUR), true)
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.sf.blurs_are_expensive=1 \
-    ro.surface_flinger.supports_background_blur=1
-else
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.launcher.blur.appLaunch=0
-endif
-
 # Disable iorapd
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.iorapd.enable=false

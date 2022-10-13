@@ -12,18 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-BANANA_CODENAME = Susu
-BANANA_MOD_VERSION = v2.1
-BANANA_PLATFORM_RELEASE_OR_CODENAME := 12L
+BANANA_CODENAME = Tanduk
+BANANA_MOD_VERSION = BETA
+BANANA_PLATFORM_RELEASE_OR_CODENAME := 13
 
 ifndef BANANA_BUILD_TYPE
 BANANA_BUILD_TYPE := UNOFFICIAL
 endif
 
 TARGET_PRODUCT_SHORT := $(subst banana_,,$(BANANA_BUILD))
-
-# Custom security patch
-CUSTOM_SECURITY_PATCH := 2022-08-05
 
 # GApps
 ifeq ($(WITH_GAPPS),true)
@@ -47,7 +44,6 @@ PRODUCT_GENERIC_PROPERTIES += \
   ro.banana.releasetype=$(BANANA_BUILD_TYPE) \
   ro.modversion=$(BANANA_RELEASED_VERSION) \
   ro.banana.build.date=$(BANANA_BUILD_DATETIME)\
-  ro.banana.build_security_patch=$(CUSTOM_SECURITY_PATCH) \
   ro.banana.display.date=$(BANANA_DISPLAY_DATE)\
   ro.banana.display.version=$(BANANA_DISPLAY_VERSION) \
   ro.banana.fingerprint=$(BANANA_FINGERPRINT)\

@@ -1,15 +1,12 @@
 # BananaDroid packages
 PRODUCT_PACKAGES += \
     BananaPaper \
-    GameSpace \
     Recorder \
     NoCutoutOverlay \
-    OmniJaws \
     AvoidAppsInCutoutOverlay \
     SettingsIntelligenceGoogle \
     ThemePicker \
-    Launcher3QuickStep \
-    RepainterServicePriv
+    Launcher3QuickStep
 
 ifneq ($(WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
