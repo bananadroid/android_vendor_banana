@@ -37,6 +37,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     pm.dexopt.ab-ota=quicken
 endif
 
+ifeq ($(TARGET_DISABLE_GRALLOC2_P010_SUPPORT), true)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.gralloc.disablep010?=true
+endif
+
 # Disable remote keyguard animation
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.wm.enable_remote_keyguard_animation=0
