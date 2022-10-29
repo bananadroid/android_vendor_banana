@@ -89,10 +89,3 @@ PRODUCT_SYSTEM_PROPERTIES += \
 # SystemUI
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
-
-# Spoof fingerprint for Google Play Services and SafetyNet
-ifeq ($(PRODUCT_OVERRIDE_GMS_FINGERPRINT),)
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_fingerprint=google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
-else
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_fingerprint=$(PRODUCT_OVERRIDE_GMS_FINGERPRINT)
-endif
