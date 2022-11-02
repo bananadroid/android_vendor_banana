@@ -1,6 +1,8 @@
 # BananaDroid packages
 PRODUCT_PACKAGES += \
     BananaPaper \
+    GameSpace \
+    OmniJaws \
     Recorder \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
