@@ -25,9 +25,15 @@ TARGET_PRODUCT_SHORT := $(subst banana_,,$(BANANA_BUILD))
 # GApps
 ifeq ($(WITH_GAPPS),true)
 IS_PHONE := true
-$(call inherit-product, vendor/gms/products/gms.mk)
 BANANA_EDITION := GApps
+ifneq ($(MINIMAL_GAPPS),true)
+$(call inherit-product, vendor/gms/common/gms-full.mk)
 else
+$(call inherit-product, vendor/gms/common/gms-minimal.mk)
+endif
+endif
+
+ifneq ($(WITH_GAPPS),true)
 BANANA_EDITION := Vanilla
 endif
 
