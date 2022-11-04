@@ -18,7 +18,6 @@ OFFICIAL_MAINTAINER = $(shell cat official-maintainers/maintainers.list | awk '{
 
 ifdef BANANA_MAINTAINER
 ifeq ($(filter $(BANANA_MAINTAINER), $(OFFICIAL_MAINTAINER)), $(BANANA_MAINTAINER))
-$(warning "$(BANANA_MAINTAINER) is verified as official maintainer, build as official build.")
     BANANA_BUILD_TYPE := OFFICIAL
 else
 $(warning "Unofficial maintainer detected, building as unofficial build.")
