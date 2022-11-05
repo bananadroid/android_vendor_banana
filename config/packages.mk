@@ -6,7 +6,6 @@ PRODUCT_PACKAGES += \
     Recorder \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
-    SettingsIntelligenceGoogle \
     ThemePicker \
     Launcher3QuickStep
 
