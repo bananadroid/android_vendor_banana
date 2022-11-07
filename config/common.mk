@@ -95,6 +95,9 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
+# Dedupe VNDK libraries with identical core variants
+TARGET_VNDK_USE_CORE_VARIANT := true
+
 # ART
 # Optimize everything for preopt
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
