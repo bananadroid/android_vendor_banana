@@ -4,6 +4,7 @@ PRODUCT_PACKAGES += \
     GameSpace \
     OmniJaws \
     Recorder \
+    TouchGestures \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
     ThemePicker \
