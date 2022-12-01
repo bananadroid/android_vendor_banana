@@ -6,6 +6,16 @@ else
 # Enable ADB authentication
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 
+# Additional props
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.error.receiver.system.apps=com.google.android.gms \
+    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
+    ro.com.google.ime.theme_id=5 \
+    drm.service.enabled=true \
+    media.mediadrmservice.enable=true \
+    persist.sys.disable_rescue=true \
+    ro.opa.eligible_device=true
+
 # GMS
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -42,10 +52,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.gralloc.disablep010?=true
 endif
 
-# Disable remote keyguard animation
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.wm.enable_remote_keyguard_animation=0
-
 # Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
 # on supported devices with Deep Press input classifier HALs and models
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -72,10 +78,6 @@ else
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.launcher.blur.appLaunch=0
 endif
-
-# Disable iorapd
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.iorapd.enable=false
 
 # SystemUI
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
