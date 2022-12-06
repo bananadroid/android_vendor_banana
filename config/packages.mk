@@ -14,7 +14,8 @@ ifneq ($(WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
     ExactCalculator \
     SimpleCalendar \
-    SimpleGallery
+    SimpleGallery \
+    ViaBrowser
 endif
 
 # Config
