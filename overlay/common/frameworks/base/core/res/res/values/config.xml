@@ -177,4 +177,7 @@
          handle wallpaper cropping.
     -->
     <string name="config_wallpaperCropperPackage" translatable="false">com.android.wallpaper</string>
+
+    <!-- Name of the font family to use in the default lockscreen clock -->
+    <string name="config_clockFontFamily" translatable="false" />
 </resources>
