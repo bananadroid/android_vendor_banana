@@ -13,8 +13,6 @@ PRODUCT_PACKAGES += \
 ifneq ($(WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
     ExactCalculator \
-    SimpleCalendar \
-    SimpleGallery \
     ViaBrowser
 endif
 
