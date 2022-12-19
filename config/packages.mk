@@ -1,5 +1,6 @@
 # BananaDroid packages
 PRODUCT_PACKAGES += \
+    Aperture \
     BananaPaper \
     GameSpace \
     OmniJaws \
@@ -12,6 +13,7 @@ PRODUCT_PACKAGES += \
 
 ifneq ($(WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
+    Etar \
     ExactCalculator \
     ViaBrowser
 endif
