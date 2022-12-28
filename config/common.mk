@@ -57,7 +57,8 @@ PRODUCT_COPY_FILES += \
 # Banana Updater permissions
 PRODUCT_COPY_FILES += \
     vendor/banana/config/permissions/privapp-permissions-banana-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-banana.xml \
-    vendor/banana/prebuilt/common/etc/permissions/privapp-permissions-livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-livedisplay.xml
+    vendor/banana/prebuilt/common/etc/permissions/privapp-permissions-livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-livedisplay.xml \
+    vendor/banana/prebuilt/common/etc/permissions/privapp-permissions-custom.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-custom.xml
 
 # Include Banana extra packages
 include vendor/banana/config/packages.mk
