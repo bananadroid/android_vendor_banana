@@ -3,6 +3,7 @@ PRODUCT_PACKAGES += \
     Aperture \
     BananaPaper \
     GameSpace \
+    MatLog \
     OmniJaws \
     Recorder \
     TouchGestures \
