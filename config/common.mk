@@ -125,6 +125,10 @@ endif
 PRODUCT_PACKAGES += \
     adb_root
 
+# rsync
+PRODUCT_PACKAGES += \
+    rsync
+
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
     procmem
