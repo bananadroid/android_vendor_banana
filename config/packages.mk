@@ -9,6 +9,7 @@ PRODUCT_PACKAGES += \
     TouchGestures \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
+    SettingsIntelligenceGoogle \
     ThemePicker \
     Launcher3QuickStep
 
