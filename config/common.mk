@@ -64,7 +64,7 @@ PRODUCT_COPY_FILES += \
 # Include Banana extra packages
 include vendor/banana/config/packages.mk
 include vendor/banana/config/prop.mk
-include vendor/extras/extras.mk
+$(call inherit-product-if-exists, vendor/extras/extras.mk)
 
 # Include Google sysconfigs
 PRODUCT_COPY_FILES += \
