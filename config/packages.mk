@@ -7,7 +7,6 @@ PRODUCT_PACKAGES += \
     GameSpace \
     OmniJaws \
     Recorder \
-    TouchGestures \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
     SettingsIntelligenceGoogle \
@@ -20,6 +19,13 @@ PRODUCT_PACKAGES += \
 ifneq ($(TARGET_EXCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
     MatLog
+endif
+
+# TouchGestures
+TARGET_SUPPORTS_TOUCHGESTURES ?= false
+ifeq ($(TARGET_SUPPORTS_TOUCHGESTURES),true)
+PRODUCT_PACKAGES += \
+    TouchGestures
 endif
 
 # Build
