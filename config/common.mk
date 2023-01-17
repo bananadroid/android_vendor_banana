@@ -12,6 +12,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/addon.d/50-superior.sh
 
+# BtHelper
+PRODUCT_PACKAGES += \
+    BtHelper
+    
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/banana/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
