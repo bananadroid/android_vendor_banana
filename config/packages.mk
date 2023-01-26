@@ -3,7 +3,6 @@ PRODUCT_PACKAGES += \
     Aperture \
     BananaPaper \
     GameSpace \
-    MatLog \
     OmniJaws \
     Recorder \
     TouchGestures \
@@ -18,6 +17,11 @@ PRODUCT_PACKAGES += \
     Etar \
     ExactCalculator \
     ViaBrowser
+endif
+
+ifneq ($(TARGET_EXCLUDE_MATLOG),true)
+PRODUCT_PACKAGES += \
+    MatLog
 endif
 
 # Build
