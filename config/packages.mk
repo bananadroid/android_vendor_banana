@@ -10,6 +10,8 @@ PRODUCT_PACKAGES += \
     AvoidAppsInCutoutOverlay \
     SettingsIntelligenceGoogle \
     ThemePicker \
+    TurboAdapter \
+    TurboPrebuilt \
     Launcher3QuickStep
 
 ifneq ($(WITH_GAPPS),true)
