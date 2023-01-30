@@ -12,13 +12,13 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     TurboAdapter \
     TurboPrebuilt \
-    Launcher3QuickStep
+    Launcher3QuickStep \
+    ViaBrowser
 
 ifneq ($(WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
     Etar \
-    ExactCalculator \
-    ViaBrowser
+    ExactCalculator
 endif
 
 ifneq ($(TARGET_EXCLUDE_MATLOG),true)
