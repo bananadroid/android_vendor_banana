@@ -2,6 +2,8 @@
 PRODUCT_PACKAGES += \
     Aperture \
     BananaPaper \
+    Etar \
+    ExactCalculator \
     GameSpace \
     OmniJaws \
     Recorder \
@@ -14,12 +16,6 @@ PRODUCT_PACKAGES += \
     TurboPrebuilt \
     Launcher3QuickStep \
     ViaBrowser
-
-ifneq ($(WITH_GAPPS),true)
-PRODUCT_PACKAGES += \
-    Etar \
-    ExactCalculator
-endif
 
 ifneq ($(TARGET_EXCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
