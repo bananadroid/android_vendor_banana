@@ -10,6 +10,7 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
     SettingsIntelligenceGoogle \
+    SetupWizard \
     ThemePicker \
     TurboAdapter \
     TurboPrebuilt \
