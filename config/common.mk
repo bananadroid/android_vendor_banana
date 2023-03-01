@@ -46,6 +46,11 @@ PRODUCT_COPY_FILES += \
 $(foreach f,$(wildcard vendor/banana/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
 
+# Permissions for lineage sdk services
+PRODUCT_COPY_FILES += \
+    vendor/banana/config/permissions/org.lineageos.health.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.health.xml \
+    vendor/banana/config/permissions/org.lineageos.livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.livedisplay.xml
+
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/banana/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.nfc.beam.xml
