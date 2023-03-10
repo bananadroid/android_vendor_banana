@@ -25,6 +25,11 @@ PRODUCT_PACKAGES += \
     TrichromeChrome
 endif
 
+ifeq ($(BANANA_BUILD_TYPE),OFFICIAL)
+PRODUCT_PACKAGES += \
+    Updates
+endif
+
 ifneq ($(TARGET_EXCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
     MatLog
