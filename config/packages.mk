@@ -17,7 +17,8 @@ PRODUCT_PACKAGES += \
     TurboAdapter \
     TurboPrebuilt \
     Launcher3QuickStep \
-    ViaBrowser
+    ViaBrowser \
+    BananaUpdater
 
 ifneq ($(TARGET_EXCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
