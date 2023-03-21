@@ -14,6 +14,7 @@ PRODUCT_PACKAGES += \
     SettingsIntelligenceGoogle \
     SetupWizard \
     ThemePicker \
+    ThemesStub \
     TurboAdapter \
     TurboPrebuilt \
     Launcher3QuickStep
