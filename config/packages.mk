@@ -16,8 +16,14 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     TurboAdapter \
     TurboPrebuilt \
-    Launcher3QuickStep \
-    ViaBrowser
+    Launcher3QuickStep
+
+ifneq ($(WITH_GAPPS),true)
+PRODUCT_PACKAGES += \
+    TrichromeLibrary \
+    TrichromeWebView \
+    TrichromeChrome
+endif
 
 ifneq ($(TARGET_EXCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
