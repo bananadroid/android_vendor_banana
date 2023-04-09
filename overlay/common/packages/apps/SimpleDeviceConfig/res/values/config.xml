@@ -57,23 +57,6 @@
         <item>device_personalization_services/Captions__enable_language_detection=true</item>
         <item>device_personalization_services/Captions__enable_punctuations=true</item>
 
-        <!-- Pixel Launcher Search -->
-        <item>device_personalization_services/Echo__search_enable_app_fetcher_v2=true</item>
-        <item>device_personalization_services/Echo__search_enable_app_search_tips=true</item>
-        <item>device_personalization_services/Echo__search_enable_app_token_indexing=false</item>
-        <item>device_personalization_services/Echo__search_enable_app_usage_stats_ranking=true</item>
-        <item>device_personalization_services/Echo__search_enable_application_header_type=true</item>
-        <item>device_personalization_services/Echo__search_enable_apps=true</item>
-        <item>device_personalization_services/Echo__search_enable_appsearch_tips_ranking_improvement=true</item>
-        <item>device_personalization_services/Echo__search_enable_assistant_quick_phrases_settings=true</item>
-        <item>device_personalization_services/Echo__search_enable_mdp_play_results=true</item>
-        <item>device_personalization_services/Echo__search_enable_search_in_app_icon=true</item>
-        <item>device_personalization_services/Echo__search_enable_static_shortcuts=true</item>
-        <item>device_personalization_services/Echo__search_enable_superpacks_app_terms=true</item>
-        <item>device_personalization_services/Echo__search_enable_superpacks_play_results=true</item>
-        <item>device_personalization_services/Echo__search_play_enable_spell_correction=true</item>
-        <item>device_personalization_services/Echo__settings_search_debug=true</item>
-
         <!-- Smartspace -->
         <item>device_personalization_services/Echo__smartspace_dedupe_fast_pair_notification=true</item>
         <item>device_personalization_services/Echo__smartspace_doorbell_aiai_loading_screen=true</item>
