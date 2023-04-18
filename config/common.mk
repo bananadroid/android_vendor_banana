@@ -153,6 +153,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/banana/overlay/no-rro
 
 PRODUCT_PACKAGES += \
+    DocumentsUIOverlay \
     NetworkStackOverlay
 
 $(call inherit-product, vendor/banana/config/telephony.mk)
