@@ -140,6 +140,7 @@ PRODUCT_PACKAGES += \
 
 # Extra cmdline tools
 PRODUCT_PACKAGES += \
+    unrar \
     zstd
 
 # These packages are excluded from user builds
