@@ -44,6 +44,7 @@ SOONG_CONFIG_bananaGlobalVars += \
     disable_bluetooth_le_set_host_feature \
     needs_camera_boottime \
     uses_oplus_camera \
+    uses_oppo_camera \
     uses_nothing_camera \
     has_legacy_camera_hal1 \
     has_memfd_backport \
@@ -88,6 +89,7 @@ SOONG_CONFIG_bananaGlobalVars_gralloc_handle_has_custom_content_md_reserved_size
 SOONG_CONFIG_bananaGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_bananaGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_bananaGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
+SOONG_CONFIG_bananaGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
 SOONG_CONFIG_bananaGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_bananaGlobalVars_camera_needs_miui_camera_mode_support := $(TARGET_USES_MIUI_CAMERA)
 SOONG_CONFIG_bananaGlobalVars_camera_needs_camera_needs_depth_sensor_override := $(TARGET_USES_DEPTHSENSOR_OVERRIDE)
