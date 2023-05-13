@@ -9,6 +9,7 @@ PRODUCT_PACKAGES += \
     Recorder \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
+    ParallelSpace \
     RepainterServicePriv \
     Seedvault \
     SettingsIntelligenceGoogle \
