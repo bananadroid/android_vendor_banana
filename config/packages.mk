@@ -11,7 +11,6 @@ PRODUCT_PACKAGES += \
     AvoidAppsInCutoutOverlay \
     ParallelSpace \
     RepainterServicePriv \
-    Seedvault \
     SettingsIntelligenceGoogle \
     SetupWizard \
     ThemePicker \
