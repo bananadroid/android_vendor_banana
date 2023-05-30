@@ -45,6 +45,7 @@ SOONG_CONFIG_bananaGlobalVars += \
     uses_oplus_camera \
     uses_oppo_camera \
     uses_nothing_camera \
+    include_miui_camera \
     has_legacy_camera_hal1 \
     has_memfd_backport \
     target_health_charging_control_charging_path \
@@ -92,6 +93,7 @@ SOONG_CONFIG_bananaGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_bananaGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
 SOONG_CONFIG_bananaGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_bananaGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
+SOONG_CONFIG_bananaGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
 SOONG_CONFIG_bananaGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_bananaGlobalVars_has_memfd_backport := $(TARGET_HAS_MEMFD_BACKPORT)
 SOONG_CONFIG_bananaGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBDEV)
