@@ -154,7 +154,8 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
-    NetworkStackOverlay
+    NetworkStackOverlay \
+    NowPlayingOverlay
 
 $(call inherit-product, vendor/banana/config/telephony.mk)
 
