@@ -174,6 +174,9 @@
     -->
     <integer name="config_defaultNightMode">2</integer>
 
+    <!-- Suppress Intent Filter Verification Service crashes and System UI ANRs (both AOSP bugs) -->
+    <string translatable="false" name="config_appsNotReportingCrashes">com.android.statementservice,com.android.systemui,com.google.android.as</string>
+
     <!-- the number of the max cached processes in the system. -->
     <integer name="config_customizedMaxCachedProcesses">48</integer>
 
