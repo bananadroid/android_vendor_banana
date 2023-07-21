@@ -98,6 +98,8 @@
         <item>org.omnirom.omnijaws</item>
         <!-- SystemUI -->
         <item>com.android.systemui</item>
+        <!-- MediaTek ImsService -->
+        <item>com.mediatek.ims</item>
     </string-array>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>
