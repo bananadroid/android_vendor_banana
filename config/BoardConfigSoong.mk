@@ -21,7 +21,7 @@ SOONG_CONFIG_bananaVarsPlugin :=
 
 define addVar
   SOONG_CONFIG_bananaVarsPlugin += $(1)
-  SOONG_CONFIG_bananaVarsPlugin_$(1) := $$(subst ",",$$($1))
+  SOONG_CONFIG_bananaVarsPlugin_$(1) := $($1)
 endef
 
 $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
