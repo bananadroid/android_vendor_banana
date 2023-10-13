@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-BANANA_CODENAME = Tanduk
-BANANA_PLATFORM_RELEASE_OR_CODENAME := 13
+BANANA_CODENAME = Uli
+BANANA_PLATFORM_RELEASE_OR_CODENAME := 14
 
 ifndef BANANA_BUILD_TYPE
 BANANA_BUILD_TYPE := UNOFFICIAL

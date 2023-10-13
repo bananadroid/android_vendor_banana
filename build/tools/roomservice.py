@@ -42,8 +42,8 @@ except ImportError:
 DEBUG = False
 
 custom_local_manifest = ".repo/local_manifests/banana.xml"
-custom_default_revision = "13"
-custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', '13')
+custom_default_revision = "14"
+custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', '14')
 custom_dependencies = "banana.dependencies"
 org_manifest = "banana-devices"  # leave empty if org is provided in manifest
 org_display = "bananadroid-devices"  # needed for displaying
