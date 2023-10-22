@@ -17,10 +17,10 @@
 
 import re
 import sys
+import importlib
 
 def main(argv):
-    reload(sys)
-    sys.setdefaultencoding('utf8')
+    importlib.reload(sys)
     original_file = 'vendor/banana/prebuilt/common/etc/apns-conf.xml'
 
     if len(argv) == 3:
@@ -30,20 +30,20 @@ def main(argv):
         raise ValueError("Wrong number of arguments %s" % len(argv))
 
     custom_apns = []
-    with open(custom_override_file, 'r') as f:
+    with open(custom_override_file, 'r', encoding='utf-8') as f:
         for line in f:
             name = re.search(r'carrier="[^"]+"', line).group(0)
             mcc = re.search(r'mcc="[^"]+"', line).group(0)
             mnc = re.search(r'mnc="[^"]+"', line).group(0)
             custom_apns.append({'name': name, 'mcc': mcc, 'mnc': mnc})
 
-    with open(original_file, 'r') as input_file:
-        with open(output_file_path, 'w') as output_file:
+    with open(original_file, 'r', encoding='utf-8') as input_file:
+        with open(output_file_path, 'w', encoding='utf-8') as output_file:
             for line in input_file:
                 found_custom_apns = []
                 for apn in custom_apns:
                     if all(item in line for item in apn.values()):
-                        with open(custom_override_file, 'r') as custom_file:
+                        with open(custom_override_file, 'r', encoding='utf-8') as custom_file:
                             for override_line in custom_file:
                                 if all(item in override_line for item in apn.values()):
                                     output_file.write(override_line)
@@ -55,7 +55,7 @@ def main(argv):
                     if "</apns>" in line:
                         if custom_apns:
                             for apn in custom_apns:
-                                with open(custom_override_file, 'r') as custom_file:
+                                with open(custom_override_file, 'r', encoding='utf-8') as custom_file:
                                     for override_line in custom_file:
                                         if all(item in override_line for item in apn.values()):
                                             output_file.write(override_line)
