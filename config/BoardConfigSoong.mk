@@ -69,6 +69,8 @@ SOONG_CONFIG_bananaNvidiaVars += \
 
 SOONG_CONFIG_NAMESPACES += bananaQcomVars
 SOONG_CONFIG_bananaQcomVars += \
+    qti_vibrator_effect_lib \
+    qti_vibrator_use_effect_stream \
     legacy_hw_disk_encryption \
     supports_extended_compress_format \
     no_camera_smooth_apis \
@@ -98,6 +100,7 @@ SOONG_CONFIG_bananaGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAME
 SOONG_CONFIG_bananaGlobalVars_has_memfd_backport := $(TARGET_HAS_MEMFD_BACKPORT)
 SOONG_CONFIG_bananaGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBDEV)
 SOONG_CONFIG_bananaNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
+SOONG_CONFIG_bananaQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 SOONG_CONFIG_bananaQcomVars_legacy_hw_disk_encryption := $(TARGET_LEGACY_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_bananaQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_bananaQcomVars_no_camera_smooth_apis := $(TARGET_HAS_NO_CAMERA_SMOOTH_APIS)
@@ -117,6 +120,7 @@ TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE ?= false
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE ?= true
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
+TARGET_QTI_VIBRATOR_EFFECT_LIB ?= libqtivibratoreffect
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 
 # Soong value variables
@@ -149,3 +153,5 @@ endif
 ifneq ($(TARGET_USES_NQ_NFC),true)
 PRODUCT_SOONG_NAMESPACES += hardware/nxp
 endif #TARGET_USES_NQ_NFC
+
+SOONG_CONFIG_bananaQcomVars_qti_vibrator_effect_lib := $(TARGET_QTI_VIBRATOR_EFFECT_LIB)
