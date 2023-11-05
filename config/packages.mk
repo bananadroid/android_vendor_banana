@@ -4,18 +4,16 @@ PRODUCT_PACKAGES += \
     BananaPaper \
     Etar \
     ExactCalculator \
-#    GameSpace \
-#    OmniJaws \
+    GameSpace \
+    OmniJaws \
     Recorder \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
-#    ParallelSpace \
     RepainterServicePriv \
     SettingsIntelligenceGoogle \
     SetupWizard \
     ThemePicker \
     ThemesStub \
-    TurboAdapter \
     TurboPrebuilt \
     Launcher3QuickStep
 
@@ -26,10 +24,10 @@ PRODUCT_PACKAGES += \
     TrichromeChrome
 endif
 
-#ifeq ($(BANANA_BUILD_TYPE),OFFICIAL)
-#PRODUCT_PACKAGES += \
-#    Updates
-#endif
+ifeq ($(BANANA_BUILD_TYPE),OFFICIAL)
+PRODUCT_PACKAGES += \
+    Updates
+endif
 
 ifneq ($(TARGET_EXCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
@@ -37,12 +35,12 @@ PRODUCT_PACKAGES += \
 endif
 
 # TouchGestures
-#TARGET_SUPPORTS_TOUCHGESTURES ?= false
-#ifeq ($(TARGET_SUPPORTS_TOUCHGESTURES),true)
-#PRODUCT_PACKAGES += \
-#    TouchGestures \
-#    TouchGesturesSettingsOverlay
-#endif
+TARGET_SUPPORTS_TOUCHGESTURES ?= false
+ifeq ($(TARGET_SUPPORTS_TOUCHGESTURES),true)
+PRODUCT_PACKAGES += \
+    TouchGestures \
+    TouchGesturesSettingsOverlay
+endif
 
 # Build
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
