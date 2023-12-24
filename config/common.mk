@@ -153,6 +153,11 @@ endif
 PRODUCT_PACKAGES += \
     adb_root
 
+# SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SettingsGoogle \
+    SystemUIGoogle
+
 # rsync
 PRODUCT_PACKAGES += \
     rsync
