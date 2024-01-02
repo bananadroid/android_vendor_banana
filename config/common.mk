@@ -67,6 +67,10 @@ PRODUCT_COPY_FILES += \
     vendor/banana/prebuilt/common/etc/permissions/privapp-permissions-livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-livedisplay.xml \
     vendor/banana/prebuilt/common/etc/permissions/privapp-permissions-custom.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-custom.xml
 
+# Cloned app exemption
+PRODUCT_COPY_FILES += \
+    vendor/banana/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-custom-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-custom-product.xml
+
 # Include Banana extra packages
 include vendor/banana/config/packages.mk
 include vendor/banana/config/prop.mk
