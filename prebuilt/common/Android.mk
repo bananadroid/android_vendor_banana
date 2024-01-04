@@ -44,7 +44,7 @@ LOCAL_PRODUCT_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := TurboPrebuilt
+LOCAL_MODULE := TurboPrebuiltGoogle
 LOCAL_SRC_FILES := priv-app/$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional

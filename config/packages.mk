@@ -10,18 +10,18 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
     RepainterServicePriv \
-    SettingsIntelligenceGoogle \
     SetupWizard \
     ThemePicker \
     ThemesStub \
-    TurboPrebuilt \
     Launcher3QuickStep
 
 ifneq ($(WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
+    SettingsIntelligenceGoogle \
     TrichromeLibrary \
     TrichromeWebView \
-    TrichromeChrome
+    TrichromeChrome \
+    TurboPrebuiltGoogle
 endif
 
 ifeq ($(BANANA_BUILD_TYPE),OFFICIAL)
