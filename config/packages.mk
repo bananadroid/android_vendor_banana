@@ -10,11 +10,13 @@ PRODUCT_PACKAGES += \
     Recorder \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
+    Pif \
     RepainterServicePriv \
     SetupWizard \
     ThemePicker \
     ThemesStub \
-    Launcher3QuickStep
+    Launcher3QuickStep \
+    WallpaperPicker2
 
 ifneq ($(WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
