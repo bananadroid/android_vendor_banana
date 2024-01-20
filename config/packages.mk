@@ -10,7 +10,6 @@ PRODUCT_PACKAGES += \
     Recorder \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
-    Pif \
     RepainterServicePriv \
     SetupWizard \
     ThemePicker \
