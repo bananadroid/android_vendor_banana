@@ -5,6 +5,9 @@ PRODUCT_BRAND ?= BananaDroid
 include vendor/banana/config/signed.mk
 include vendor/banana/config/version.mk
 
+# Pixel Framework
+$(call inherit-product, vendor/pixel-framework/config.mk)
+
 PRODUCT_SIZE := full
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
