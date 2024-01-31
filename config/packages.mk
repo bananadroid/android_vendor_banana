@@ -6,6 +6,7 @@ PRODUCT_PACKAGES += \
     Etar \
     ExactCalculator \
     GameSpace \
+    Glimpse \
     OmniJaws \
     Recorder \
     NoCutoutOverlay \
