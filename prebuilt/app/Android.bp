@@ -1,4 +1,14 @@
 android_app_import {
+    name: "InnerTune",
+    apk: "InnerTune.apk",
+    presigned: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+android_app_import {
     name: "SettingsGoogleFutureFaceEnroll",
     apk: "SettingsGoogleFutureFaceEnroll.apk",
     certificate: "platform",

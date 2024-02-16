@@ -36,6 +36,11 @@ PRODUCT_PACKAGES += \
     MatLog
 endif
 
+ifneq ($(TARGET_EXCLUDE_INNERTUNE),true)
+PRODUCT_PACKAGES += \
+    InnerTune
+endif
+
 # TouchGestures
 TARGET_SUPPORTS_TOUCHGESTURES ?= false
 ifeq ($(TARGET_SUPPORTS_TOUCHGESTURES),true)
