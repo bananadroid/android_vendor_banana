@@ -3,20 +3,3 @@ java_import {
     jars: ["lib/vendorAacHardwareRichtapVibrator.jar"],
     sdk_version: "current",
 }
-
-android_app_import {
-    name: "SettingsGoogleFutureFaceEnroll",
-    apk: "priv-app/SettingsGoogleFutureFaceEnroll.apk",
-    certificate: "platform",
-    privileged: true,
-    required: ["privapp_whitelist_settings.future.face.enroll.xml"],
-    system_ext_specific: true,
-}
-
-prebuilt_etc {
-    name: "privapp_whitelist_settings.future.face.enroll.xml",
-    sub_dir: "permissions",
-    src: "etc/permissions/settings.future.face.enroll.xml",
-    filename_from_src: true,
-    system_ext_specific: true,
-}
