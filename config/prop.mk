@@ -55,16 +55,34 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat64.enabled=true
 endif
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    pm.dexopt.boot=verify \
-    pm.dexopt.first-boot=quicken \
+# Art
+PRODUCT_PRODUCT_PROPERTIES += \
+    pm.dexopt.post-boot=extract \
+    pm.dexopt.boot-after-mainline-update=verify \
     pm.dexopt.install=speed-profile \
-    pm.dexopt.bg-dexopt=everything
+    pm.dexopt.install-fast=skip \
+    pm.dexopt.install-bulk=speed-profile \
+    pm.dexopt.install-bulk-secondary=verify \
+    pm.dexopt.install-bulk-downgraded=verify \
+    pm.dexopt.install-bulk-secondary-downgraded=extract \
+    pm.dexopt.bg-dexopt=speed-profile \
+    pm.dexopt.ab-ota=speed-profile \
+    pm.dexopt.inactive=verify \
+    pm.dexopt.cmdline=verify \
+    pm.dexopt.shared=speed \
+    pm.dexopt.first-boot=verify \
+    pm.dexopt.boot-after-ota=verify \
+    dalvik.vm.minidebuginfo=false \
+    dalvik.vm.dex2oat-minidebuginfo=false
 
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_PROPERTY_OVERRIDES += \
     pm.dexopt.ab-ota=quicken
 endif
+
+# Permissions
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.control_privapp_permissions=log
 
 ifeq ($(TARGET_DISABLE_GRALLOC2_P010_SUPPORT), true)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -106,3 +124,22 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+
+# Always preopt extracted APKs to prevent extracting out of the APK for gms
+# modules.
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+
+# Do not generate libartd.
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
+# Disable dex2oat debug
+USE_DEX2OAT_DEBUG := false
+
+# Strip the local variable table and the local variable type table to reduce
+# the size of the system image. This has no bearing on stack traces, but will
+# leave less information available via JDWP.
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+
+# Optimize java for system processes
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
