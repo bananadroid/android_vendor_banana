@@ -8,6 +8,7 @@ PRODUCT_PACKAGES += \
     GameSpace \
     Glimpse \
     OmniJaws \
+    OmniStyle \
     Recorder \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay \
